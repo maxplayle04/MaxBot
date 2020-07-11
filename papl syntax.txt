@@ -1,0 +1,66 @@
+-----------------------------------------------------------------------------------------------------------------
+MAXBOT PAPERS PLEASE COMMANDS OVERVIEW
+-----------------------------------------------------------------------------------------------------------------
+mmbot/papl/modrecord [string: object to modify] [string: new value]
+-----------------------------------------------------------------------------------------------------------------
+[string: object to modify] possibilities:
+~~~
+idnumber 				~ Modifies the record's ID number 
+MinecraftUsername			~ Modifies the record's Minecraft Username
+dRank					~ Modifies the record's Discord Rank 
+dUser					~ Modifies the record's Discord User ID 
+~~~
+idnumber				~ Accepts integer
+MinecraftUsername			~ Accepts string
+dRank					~ Accepts ulong integer
+dUser					~ Accepts ulong integer
+~~~
+-----------------------------------------------------------------------------------------------------------------
+mmbot/papl/identify [int: identification number]
+-----------------------------------------------------------------------------------------------------------------
+[int: identification number] possibilities:
+~~~
+Any 32-bit integer set as the ID number of a record. If it isn't a valid record, it'll just return
+an error!
+~~~
+-----------------------------------------------------------------------------------------------------------------
+mmbot/papl/listall 
+-----------------------------------------------------------------------------------------------------------------
+No perameters.
+~~~
+Lists all active records in the current server.
+~~~
+-----------------------------------------------------------------------------------------------------------------
+mmbot/papl/addrecord [int: identification number] [@mention: user] [@mention: role] [string: minecraft username]
+-----------------------------------------------------------------------------------------------------------------
+[int: identification number]
+~~~
+Any 32-bit integer which isn't -255 and is not currently set as another current ID. If you set this value to 
+a currently existing record, that record will be overwritten with the new one.
+~~~
+[@mention: user]
+~~~
+Mention a user here or type their ID, this will be the Discord User you wish to bind to the record.
+~~~
+[@mention: role]
+~~~
+Mention a role or type its ID here, this will be the Discord Role you wish to bind to the record.
+~~~
+[string: minecraft username]
+~~~
+The remainder of the command will be the Minecraft Username of the person you wish to bind to the record; this 
+entry *CAN* contain spaces!
+~~~
+-----------------------------------------------------------------------------------------------------------------
+mmbot/papl/delrecord [int: identification number]
+-----------------------------------------------------------------------------------------------------------------
+[int: identification number]
+~~~
+Any 32-bit integer which represents a currently held record for that server.
+If the ID number isn't a valid record for that server; an error will be returned.
+-----------------------------------------------------------------------------------------------------------------
+mmbot/papl/syntax
+-----------------------------------------------------------------------------------------------------------------
+Returns a link to this file.
+-----------------------------------------------------------------------------------------------------------------
+
